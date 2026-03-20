@@ -1,0 +1,123 @@
+.App{
+    max-width: var(--max-width);
+    
+}
+/* Styling the 'header' */
+main header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+main header h1, main .filteringButtons{
+    display: flex;
+    justify-content: center;
+}
+
+main header h1{
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+main header .underline{
+    width: 100px;
+    height: 3px;
+    background-color: var(--clr-gold-light);
+}
+
+
+
+/* styling 'buttons' */
+main .filteringButtons button{
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: .2rem .6rem ;
+    background-color: var(--clr-gold-light);
+    color: var(--clr-white);
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+}
+main .filteringButtons button:hover{
+    background-color: var(--clr-gold-dark);
+    transition: var(--transition);
+}
+
+
+
+/* styling the cards */
+main .cardsSection{
+    display: grid;
+    /* grid-template-columns: repeat(3,300px) */
+    grid-template-columns: repeat(auto-fit ,minmax(300px, 1fr));
+    /* grid-template-columns: repeat(3, minmax(300px, 1fr)) */
+    /* grid-template-columns: repeat(3, minmax(450px, 1fr)) */
+    /* grid-template-columns: minmax(450px, repeat(3, 1fr)) */
+    grid-gap: 3rem 2rem;
+    margin-inline: auto;
+    margin: .5rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+main .cardsSection article{
+   box-shadow: var(--light-shadow);
+   
+}
+main .cardsSection article img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    
+}
+
+main .cardsSection article p, .quickBar{
+    width: 85%;
+    margin-inline: auto;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+main .cardsSection article .quickBar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+}
+
+main .cardsSection article .quickBar h2{
+    font-weight: normal;
+    /* font-size: x-large; */
+}
+main .cardsSection article .quickBar h3{
+    font-weight: normal;
+    font-size: 1rem;
+    /* margin-inline: auto; */
+    /* background-color: var(--clr-gold-light);
+    height: 1rem;
+    padding: .2rem .5rem; */
+}
+
+main .cardsSection article .quickBar div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-gold-light);
+    height: fit-content;
+    padding: 0 .7rem;
+    border: 1px solid;
+    border-radius: var(--radius);
+    border: none;
+}
+
+main .cardsSection article p{
+    color: var(--clr-grey-4);
+    margin-bottom: 1rem;
+}
