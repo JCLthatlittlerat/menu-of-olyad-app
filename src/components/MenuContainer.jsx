@@ -4,13 +4,13 @@ import data from '../data'
 import Card from './Card'
 import Navbar from "./Navbar";
 function MenuContainer() {
-  const uniqueCategories = ['All', ...new Set(data.map(item => item.category))];
+  const uniqueCategories = ['ሁሉም', ...new Set(data.map(item => item.category))];
   const [filteringCatagory, setFilteringCategory] = useState(data);
   // const {id, title, category, price, img, desc} = data
 
   //  useEffect(() => { console.log({ id, title, category, price, img, }) })
   function filterData(filter) {
-    if (filter === 'All') {
+    if (filter === 'ሁሉም') {
       setFilteringCategory(data);
     }
     else {
@@ -23,7 +23,7 @@ function MenuContainer() {
     <main>
       <Navbar />
       <header className='App-header'>
-        <h2 className='text-5xl mb-2 pb-2'>Menu</h2>
+        <h2 className='text-5xl mb-2 pb-2'>የምግብ ዝርዝር</h2>
         <div className='underline'></div>
       </header>
 
